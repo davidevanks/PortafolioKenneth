@@ -15,6 +15,8 @@ namespace PortafolioKenneth.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Nombre = "Kenneth Evanks 2";
+            ViewBag.Edad = 32;
             return View();
         }
 
