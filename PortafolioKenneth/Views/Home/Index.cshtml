@@ -1,13 +1,34 @@
-﻿@{
+﻿@model Persona
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Soy @ViewBag.Nombre (@ViewBag.Edad)</h1>
+    <h1 class="display-4">Soy @Model.Nombre (@Model.Edad)</h1>
     <h2>Soy un desarrollador .NET Fullstack Developer</h2>
 
 
     <img
        id="foto"
         src="~/imagenes/foto.png" alt="foto de kenneth" />
+</div>
+
+
+<div class="text-center">
+    <img id="imagen-dotnet" src="~/imagenes/Microsoft_.NET_logo.svg.png" alt="dotnet logo"/>
+</div>
+
+
+<div class="row justify-content-center text-center bg-primary">
+    <div class="col col-md-7 seccion-bienvenida">
+        <h1>Te doy la binvenida a mi portafolio</h1>
+        <p>
+            Soy .NET FullStack Developer con más de 5 años de experiencia en el desarrollo de software. Actualmente trabajo para una empresa nearshore que ayuda a clientes en diferentes industrias en el desarrollo y mantenimiento de software a la medida para sus negocios.
+
+            He tenido la oportunidad de trabajar en diferentes empresas y proyectos, utilizando C#/.Net, .Net Core, Net 5, patron de repositorio y Unit Of Work, Entity FrameWork, patrón de diseño de software MVC, Webforms, SQL SERVER y parte del front-end con HTML, CSS, Javascript y Jquery, así como análisis y levantamiento de requerimientos. También he apoyado en la atención al cliente y soporte de aplicaciones web.
+
+            Me apasiona convertir ideas en productos funcionales que mejoren la vida de las personas y aprender sobre tecnología.
+        </p>
+    </div>
 </div>

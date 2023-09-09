@@ -15,9 +15,10 @@ namespace PortafolioKenneth.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Nombre = "Kenneth Evanks 2";
-            ViewBag.Edad = 32;
-            return View();
+            Persona p = new Persona();
+            p.Edad = 89;
+            p.Nombre = "Emilio Lio";
+            return View(p);
         }
 
         public IActionResult Privacy()
