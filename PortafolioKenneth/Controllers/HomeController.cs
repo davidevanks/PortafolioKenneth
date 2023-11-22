@@ -15,16 +15,45 @@ namespace PortafolioKenneth.Controllers
 
         public IActionResult Index()
         {
-            Persona p = new Persona();
-            p.Edad = 89;
-            p.Nombre = "Emilio Lio";
-            return View(p);
+            //Persona p = new Persona();
+            //p.Edad = DateTime.Now.Year-1991;
+            //p.Nombre = "Kenneth Gaitán";
+            var proyectos = ObtenerProyectos().Take(3).ToList();
+            var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
+            return View(modelo);
         }
 
         public IActionResult Privacy()
         {
             return View();
         }
+
+
+        private List<Proyecto> ObtenerProyectos()
+        {
+            return new List<Proyecto>(){ new Proyecto
+            {
+                Titulo="People Thrust",
+                Descripcion="Outsourcing de desarrollo en .NET CORE",
+                Link="https://peoplethrust.com",
+                ImagenURL="/imagenes/amajpg.jpeg"
+            },
+            new Proyecto
+            {
+                Titulo="Dominion",
+                Descripcion="Outsourcing de desarrollo en .NET MVC",
+                Link="https://dominion.com",
+                ImagenURL="/imagenes/amajpg.jpeg"
+            },
+            new Proyecto
+            {
+                Titulo="Juega OK",
+                Descripcion="Recursos humanos",
+                Link="https://juegaok.com",
+                ImagenURL="/imagenes/amajpg.jpeg"
+            },
+            };
+            }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
